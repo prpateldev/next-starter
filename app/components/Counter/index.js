@@ -13,7 +13,6 @@ class Counter extends Component {
 
     render(){
         return <div>
-                <h4>{JSON.stringify(this.props.counter)}</h4>
                 <CounterView 
                     counter={this.props.counter.count} 
                     add={() => this.props.add(1)} 
