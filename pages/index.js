@@ -15,4 +15,8 @@ const Index = (props) => {
             </div>
 }
 
+Index.getInitailProps = ({store, isServer, pathname, query}) => {
+
+}
+
 export default withRedux(store, null)(Index);

@@ -1,5 +1,5 @@
 import { createStore, applyMiddleware, combineReducers } from 'redux';
-// import thunkMiddleware from 'thunk';
+import thunkMiddleware from 'redux-thunk';
 
 
 // action and reducers
@@ -13,14 +13,26 @@ import counter from './counter/counterReducer';
 //     }),
 //     {}
 // );
+let store = null;
+
+const combinedReducers = combineReducers({
+    counter
+});
 
 
-const initStore = (initialState = {}) => {
-    return createStore(
-        combineReducers({
-            counter
-        }), initialState);
-    // , composeWithDevTools(applyMiddleware(thunkMiddleware))
+const initStore = (initialState = {}, isServer) => {
+    if(isServer && typeof window === undefined) {
+        return createStore(
+            combinedReducers, initialState, applyMiddleware(thunkMiddleware));
+            // , composeWithDevTools(applyMiddleware(thunkMiddleware))
+    } else {
+        if(!store) {
+            store = createStore(
+                combinedReducers, initialState, applyMiddleware(thunkMiddleware));
+        }
+
+        return store;
+    }
 }
 
 export default initStore;
