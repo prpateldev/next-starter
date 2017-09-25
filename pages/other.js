@@ -5,14 +5,15 @@ import Link from 'next/link';
 
 import Counter from '../app/components/Counter';
 
-const Index = (props) => {
+const OtherPage = (props) => {
     return <div>
-                <h1>Next.js starter kit</h1>
-                <Link href="/other">
-                    <a>Other Page</a>
+                <h1>Other Page</h1>
+                <Link href="/">
+                    <a>Home</a>
                 </Link>
                 <Counter />
             </div>
 }
 
-export default withRedux(store, null)(Index);
+export default withRedux(store, null)(OtherPage);
+
