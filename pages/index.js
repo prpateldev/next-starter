@@ -9,7 +9,11 @@ const Index = (props) => {
     return <div>
                 <h1>Next.js starter kit</h1>
                 <Link href="/other">
-                    <a>Other Page</a>
+                    <a>Other</a>
+                </Link>
+                &nbsp; &nbsp;
+                <Link href="/bootstrap">
+                    <a>Bootstrap</a>
                 </Link>
                 <Counter />
             </div>
