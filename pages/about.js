@@ -1,7 +1,8 @@
 const AboutPage = (props) => {
     return (
         <div>
-            About Page
+            About Page 
+            <p>This page call from custom server</p>
         </div>
     )
 }
