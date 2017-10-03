@@ -32,6 +32,11 @@ class Menu extends React.Component {
                         <a className={this.props.activeLink == '/dynamic'? 'nav-link active': 'nav-link'}>Dynamic Components</a>
                     </Link>
                 </li>
+                <li className="nav-item">
+                    <Link href="/animationExamples" as="animations">
+                        <a className={this.props.activeLink == '/animations'? 'nav-link active': 'nav-link'}>Animations</a>
+                    </Link>
+                </li>                
             </ul>
         </div>
       </nav>

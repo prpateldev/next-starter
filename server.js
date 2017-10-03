@@ -20,6 +20,10 @@ app.prepare().then(() => {
         app.render(req, res, '/about', req.params);
     });
 
+    server.get('/animations', (req, res) => {
+        app.render(req, res, '/animationExamples', req.params);
+    });
+
     server.get('*', (req, res) => {
         handle(req, res);
     });
