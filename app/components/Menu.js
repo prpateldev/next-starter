@@ -36,7 +36,12 @@ class Menu extends React.Component {
                     <Link href="/animationExamples" as="animations">
                         <a className={this.props.activeLink == '/animations'? 'nav-link active': 'nav-link'}>Animations</a>
                     </Link>
-                </li>                
+                </li>
+                <li className="nav-item">
+                    <Link href="/nossr">
+                        <a className={this.props.activeLink == '/nossr'? 'nav-link active': 'nav-link'}>No-SSR</a>
+                    </Link>
+                </li>
             </ul>
         </div>
       </nav>
